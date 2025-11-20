@@ -8,7 +8,13 @@ for key in menu:
     print(f"{key}\tPrice: {menu[key]}")
 
 order = input("Please select one of the menus above: ")
-if order in menu.keys():
-    print(f"{order} is {menu[order]}. Please pay.")
-else:
+
+cnt = 0
+for k y in menu.items():
+    if order.lower() == k.lower():
+        print(f"{k} is {v}. Please pay.")
+        cnt = 1
+            
+if cnt == 0:
     print(f"Sorrry, {order} is not in the menu")
+
